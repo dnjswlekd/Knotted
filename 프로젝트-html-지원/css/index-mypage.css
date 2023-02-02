@@ -1,0 +1,1666 @@
+* {
+  padding: 0;
+  margin: 0;
+  outline: none;
+  text-decoration: none;
+  /* font-family: 'nanumsquare'; */
+  list-style: none;
+  border-spacing: 0px;
+}
+
+td{
+  font-family: 'nanumsquare';
+}
+
+#cursor {
+  position: absolute;
+  z-index: 9999999999999999;
+  transform: translate(10%, 10%);
+  background-image: url(../image/cursorFill3.svg);
+  background-size: contain;
+  width: 30px;
+  height: 30px;
+  pointer-events: none;
+  background-color: rgba(255, 255, 255, 0);
+}
+
+@import url('https://cdn.rawgit.com/moonspam/NanumSquare/master/nanumsquare.css');
+
+@font-face {
+  font-family: 'GangwonEduPowerExtraBoldA';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2201-2@1.0/GangwonEduPowerExtraBoldA.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+body::-webkit-scrollbar {
+  width: 8px; /* 스크롤바의 너비 */
+}
+
+body::-webkit-scrollbar-thumb {
+  height: 30%; /* 스크롤바의 길이 */
+  background: #f2a69a; /* 스크롤바의 색상 */
+
+  border-radius: 10px;
+}
+
+body::-webkit-scrollbar-track {
+  background: #f2a69a43; /*스크롤바 뒷 배경 색상*/
+}
+/*------------헤더----------------------------------------------------------------헤더*/
+#wrapper {
+  width: 100%;
+  height: 120px;
+  padding-top: 30px;
+  background: transparent;
+  background-color: #fefdfa;
+}
+#header {
+  display: flex;
+}
+#header nav {
+  display: flex;
+  width: 100vw;
+  justify-content: space-between;
+  align-items: center;
+}
+#header .menu {
+  display: flex;
+  margin-right: 50px;
+}
+.menu > li {
+  margin: 0 25px;
+  font-size: 18px;
+}
+
+.menu a {
+  color: inherit;
+  text-decoration: inherit;
+  font-family: 'GangwonEduPowerExtraBoldA';
+  padding: 5px;
+}
+
+.btn-login {
+  font-family: 'GangwonEduPowerExtraBoldA';
+}
+
+/*----------------------기본css-------------------------------------기본 css*/
+body {
+  height: 100vh;
+  overflow-x: hidden;
+  background-color: #fdfaf2;
+}
+
+.profile > .gear {
+  display: none;
+  cursor: pointer;
+}
+
+.frm {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+
+.listcont {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  color: #f2a69a;
+}
+
+.mypage {
+  font-family: 'GangwonEduPowerExtraBoldA';
+  background-color: #fefdfa;
+  padding: 80px 0;
+  justify-self: center;
+  align-self: center;
+  text-align: center;
+  font-size: 30px;
+  width: 282px;
+  cursor: pointer;
+}
+
+.mylist > li {
+  cursor: pointer;
+  font-family: 'nanumsquare';
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: flex-end;
+  width: 230px;
+  height: 50px;
+  margin-bottom: 10px;
+  /* border-bottom: 1px solid #f2a69a; */
+}
+
+.mylist > li > p {
+  font-family: 'GangwonEduPowerExtraBoldA';
+  padding-top: 5px;
+}
+
+.mylist > li > .reimg {
+  width: 35px;
+  padding-bottom: 2px;
+}
+
+.infor:hover {
+  color: white;
+  justify-items: end;
+  grid-template-columns: 1fr 0.4fr;
+  padding-right: 10px;
+  background: linear-gradient(270deg, #f2a69a, #fcc9c1, #fdfaf2);
+  transition: all 0.8s linear;
+}
+.infor:hover .img {
+  color: white;
+  justify-items: end;
+  transition: all 0.2s linear;
+}
+
+.heart:hover {
+  background: linear-gradient(270deg, #f2a69a, #fcc9c1, #fdfaf2);
+  transition: all 0.8s linear;
+  color: white;
+  justify-items: end;
+  grid-template-columns: 1fr 0.3fr;
+  padding-right: 10px;
+}
+.heart:hover .img {
+  color: white;
+  justify-items: end;
+  transition: all 0.2s linear;
+}
+
+.salelist:hover {
+  background: linear-gradient(270deg, #f2a69a, #fcc9c1, #fdfaf2);
+  transition: all 0.8s linear;
+  color: white;
+  justify-items: end;
+  grid-template-columns: 1fr 0.4fr;
+  padding-right: 10px;
+}
+.salelist:hover .img {
+  color: white;
+  justify-items: end;
+  transition: all 0.2s linear;
+}
+
+.orderlist:hover {
+  background: linear-gradient(270deg, #f2a69a, #fcc9c1, #fdfaf2);
+  transition: all 0.8s linear;
+  color: white;
+  justify-items: end;
+  grid-template-columns: 1fr 0.7fr;
+  padding-right: 10px;
+}
+.orderlist:hover .img {
+  color: white;
+  justify-items: end;
+  transition: all 0.2s linear;
+}
+
+.review:hover {
+  background: linear-gradient(270deg, #f2a69a, #fcc9c1, #fdfaf2);
+  transition: all 0.8s linear;
+  color: white;
+  justify-items: end;
+  grid-template-columns: 1fr 0.6fr;
+  padding-right: 10px;
+}
+.review:hover .img {
+  color: white;
+  justify-items: end;
+  transition: all 0.2s linear;
+}
+
+.salecupon:hover {
+  background: linear-gradient(270deg, #f2a69a, #fcc9c1, #fdfaf2);
+  transition: all 0.8s linear;
+  color: white;
+  justify-items: end;
+  grid-template-columns: 1fr 0.4fr;
+  padding-right: 10px;
+}
+
+.salecupon:hover .img {
+  display: block;
+  color: white;
+  justify-items: end;
+  width: 25px;
+  transition: all 0.2s linear;
+}
+
+.service:hover {
+  background: linear-gradient(270deg, #f2a69a, #fcc9c1, #fdfaf2);
+  transition: all 0.8s linear;
+  color: white;
+  justify-items: end;
+  grid-template-columns: 1fr 0.4fr;
+  padding-right: 10px;
+}
+.service:hover .img {
+  color: white;
+  justify-items: end;
+  transition: all 0.2s linear;
+}
+
+.img {
+  justify-self: end;
+  color: #f2a69a;
+  width: 25px;
+  margin-right: 10px;
+}
+
+.profile {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 45px 35px 48px 35px;
+  background-color: #fefdfa;
+  width: calc(100% - 69px);
+}
+
+.donutimg {
+  position: relative;
+  width: 100px;
+  height: 100px;
+  overflow: hidden;
+}
+
+.donut {
+  height: 100px;
+  position: absolute;
+  background-size: cover;
+  top: 0;
+}
+
+.fafa {
+  right: -10px;
+}
+
+.donutname {
+  padding-left: 10px;
+}
+
+.welcom {
+  width: 70vw;
+}
+
+.welcoment {
+  display: flex;
+  flex-direction: row;
+  font-family: 'GangwonEduPowerExtraBoldA';
+  font-size: 25px;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.ment {
+  padding-top: 15px;
+  font-family: 'GangwonEduPowerExtraBoldA';
+}
+
+.myadj {
+  font-family: 'GangwonEduPowerExtraBoldA';
+  background-color: #f7d3cd;
+  border: none;
+  border-radius: 10px;
+  font-size: 20px;
+  padding: 25px 50px 15px;
+  color: #fff;
+  cursor: pointer;
+}
+.myadj:hover {
+  background-color: #ffbdb1;
+  background: linear-gradient(270deg, #ffbdb1);
+  transition: all 0.4s linear;
+}
+
+.smile {
+  width: 80px;
+  height: 80px;
+}
+
+.truck {
+  padding: 0 10px;
+  width: 50px;
+}
+
+.orlist {
+  display: flex;
+  flex-direction: column;
+}
+
+.ordertitle {
+  display: flex;
+  align-items: flex-end;
+  background-color: #fff7c1;
+  padding: 25px 10px;
+  font-family: 'GangwonEduPowerExtraBoldA';
+  color: #f2a69a;
+  font-size: 25px;
+}
+.ordertitle2 {
+  display: flex;
+  align-items: flex-end;
+  background-color: #fff7c1;
+  padding: 25px 10px;
+  font-family: 'GangwonEduPowerExtraBoldA';
+  color: #f2a69a;
+  font-size: 25px;
+}
+
+.ordtd,
+.reviewtd {
+  width: 70vw;
+  background-color: #fefdfa;
+  border: none;
+  border-spacing: 0px;
+}
+.ordtd2,
+.reviewtd2 {
+  width: 70vw;
+  background-color: #fefdfa;
+  border-spacing: 0px;
+}
+
+.ordtd > td {
+  font-size: 15px;
+}
+.reviewtd > td {
+  font-size: 15px;
+}
+.ordtd2 > td {
+  font-size: 15px;
+}
+.reviewtd2 > td {
+  font-size: 15px;
+}
+
+.donut,
+.donutname,
+.pay,
+.day,
+.state {
+  margin-right: 10px;
+}
+
+.reviewtitle {
+  display: flex;
+  align-items: flex-start;
+  background-color: #ffe8e4;
+  padding: 25px 20px;
+  font-family: 'GangwonEduPowerExtraBoldA';
+  color: #f2a69a;
+  font-size: 25px;
+}
+.reviewtitle2 {
+  display: flex;
+  align-items: flex-start;
+  background-color: #ffe8e4;
+  padding: 25px 20px;
+  font-family: 'GangwonEduPowerExtraBoldA';
+  color: #f2a69a;
+  font-size: 25px;
+}
+
+.fa-solid,
+.fa-regular {
+  padding: 0;
+  margin: 0;
+}
+
+.sale {
+  display: none;
+}
+
+.reviwetxt {
+  font-family: 'GangwonEduPowerExtraBoldA';
+  margin-top: 10px;
+}
+
+.reviewpage {
+  font-family: 'GangwonEduPowerExtraBoldA';
+  background-color: #f7d3cd;
+  font-size: 17px;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  padding: 30px 40px 20px;
+}
+.reviewpage:hover {
+  background-color: #ffbdb1;
+  background: linear-gradient(270deg, #ffbdb1);
+  transition: all 0.4s linear;
+}
+
+.day,
+.pay,
+.state {
+  text-align: center;
+  font-size: 13px;
+}
+
+.event {
+  display: flex;
+  flex-direction: column;
+}
+
+.event > p {
+  padding: 50px 30px 0px 60px;
+  font-family: 'GangwonEduPowerExtraBoldA';
+  font-size: 25px;
+}
+
+.shinhan,
+.buds,
+.socar {
+  width: 90%;
+  cursor: pointer;
+}
+
+.eventimg {
+  padding: 20px 0;
+  width: 688px;
+  justify-self: center;
+  align-self: center;
+}
+
+/*------------------------------------------------------------고객센터css*/
+.con_serv {
+  flex-basis: inherit;
+}
+
+.servhelp {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.rainbow {
+  width: calc(100%);
+}
+
+.helptxt {
+  font-family: 'GangwonEduPowerExtraBoldA';
+  font-size: 20px;
+  position: absolute;
+}
+
+.Asked,
+.ftfinq {
+  display: block;
+  font-family: 'GangwonEduPowerExtraBoldA';
+  font-size: 20px;
+  background-color: #fefdfa;
+  height: 50px;
+  padding: 40px 5px 5px 30px;
+}
+
+.ulasked {
+  line-height: 35px;
+}
+
+.liasked {
+  border-bottom: 1px solid #333;
+  text-indent: 20px;
+}
+
+.showtitle {
+  transition: ease-in-out 0.2s all;
+  cursor: pointer;
+}
+
+.showtitle:hover {
+  padding-left: 25px;
+}
+
+.showtitle::before,
+.showtitle::after {
+  content: '';
+  position: absolute;
+  height: 2px;
+  border-radius: 50px;
+  transition: ease-in-out 0.6s all;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.showtitle::before {
+  width: 100%;
+}
+
+.showtitle::after {
+  width: 0%;
+}
+
+.showtitle:hover::after {
+  width: 100%;
+}
+
+.showask {
+  background-color: #fefdfa;
+  font-size: 12px;
+  border-top: 1px solid #ffda48;
+  padding: 0 50px;
+  text-indent: 0;
+  font-family: 'NanumSquare';
+  animation: pullDown 300ms ease-in-out forwards;
+}
+@keyframes pullDown {
+  0% {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.slideUp {
+  height: 0px;
+  animation: slideUp 300ms ease-in-out forwards;
+}
+@keyframes slideUp {
+  0% {
+    opacity: 1;
+    transform: translateY(1);
+  }
+
+  100% {
+    opacity: 0;
+    transform: translateY(0);
+  }
+}
+/* 
+.ulasked .liasked .showask {
+  opacity: 0;
+   height: 0;
+   padding: 0px 20px;
+   position: relative;
+   line-height: 24px;
+   font-size: 16px;
+   font-weight: 200;
+   transition: all 0.6s cubic-bezier(.42,.2,.08,1);
+   overflow: hidden;
+   background-color: #f0f5f9;
+   letter-spacing: 0.5px;
+}
+
+.ulasked .liasked .showask .show{
+  background-color: #fefdfa;
+  font-size: 12px;
+  border-top: 1px solid #ffda48;
+  padding: 0 50px;
+  text-indent: 0;
+  opacity: 1;
+   height: auto;
+   padding: 25px 20px;
+   position: relative;
+   z-index: 0;
+   border-radius: 0px 0px 3px 3px;
+} */
+
+.Noshow {
+  display: none;
+}
+
+.servecon {
+  position: relative;
+  width: calc(100%);
+  height: 331px;
+  overflow: hidden;
+}
+
+.flower {
+  position: absolute;
+  left: calc(-10%);
+}
+
+.servecon > .servtime {
+  position: absolute;
+  right: calc(30%);
+  top: calc(30%);
+  font-size: 20px;
+}
+
+.servecon > .servtime1 {
+  font-family: 'GangwonEduPowerExtraBoldA';
+}
+
+/*------------------------------------------------------------------회원정보css */
+.infor_container a {
+  text-decoration: none;
+}
+
+.infor_container {
+  padding-top: 30px;
+}
+
+.formct p {
+  color: red;
+  margin-top: 5px;
+  text-indent: 15px;
+}
+
+.formct select {
+  border: 1px solid #e5e5e5;
+  border-radius: 10px;
+}
+
+.infor_container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-content: center;
+  align-items: center;
+}
+
+.formct > .form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 auto;
+  width: 730px;
+  height: 1350px;
+  border: 0px solid #ffda48;
+  border-radius: 10px;
+  color: #333;
+  text-indent: 10px;
+}
+
+.formct .labcon {
+  display: flex;
+  flex-direction: column;
+  margin: 10px 20px;
+}
+
+.formct input {
+  border: 1px solid #e5e5e5;
+  border-radius: 10px;
+  background-color: #fff;
+}
+
+.formct input::placeholder {
+  color: #bababa;
+}
+
+.formct .id {
+  font-family: 'GangwonEduPowerExtraBoldA';
+  margin-bottom: 20px;
+}
+
+.formct .idTx {
+  width: 320px;
+  font-size: 17px;
+  border-radius: 10px;
+  text-indent: 15px;
+  padding: 20px;
+  margin-right: 30px;
+}
+
+.formct .idTxcon {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+
+.formct .double {
+  width: 205px;
+  font-size: 20px;
+  border-radius: 10px;
+  border: none;
+  background-color: #f7d3cd;
+  color: white;
+  font-family: 'GangwonEduPowerExtraBoldA';
+  padding-top: 10px;
+}
+.formct .double:hover {
+  background-color: #ffbdb1;
+  background: linear-gradient(270deg, #ffbdb1);
+  transition: all 0.4s linear;
+}
+
+.formct .password,
+.formct .checkpass,
+.formct .name,
+.formct .address,
+.formct .numTxcon {
+  display: flex;
+  flex-direction: column;
+  font-family: 'GangwonEduPowerExtraBoldA';
+}
+
+.formct .password {
+  margin-bottom: 20px;
+}
+
+.formct .passTx {
+  text-indent: 15px;
+}
+
+.formct .checkpass {
+  margin-bottom: 20px;
+}
+
+.formct .checkPassTx {
+  text-indent: 15px;
+}
+
+.formct .name {
+  margin-bottom: 20px;
+}
+
+.formct .nameTx {
+  text-indent: 15px;
+}
+
+.formct .address {
+  margin-bottom: 10px;
+}
+
+.formct .addTxcon {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+
+.formct .readdTx {
+  text-indent: 15px;
+
+  margin-top: 10px;
+}
+
+.formct .numTxcon {
+  margin: 10px 0;
+}
+
+.formct .numTx {
+  text-indent: 15px;
+}
+
+.formct .emailcont,
+.formct .birthcon {
+  display: flex;
+  flex-direction: row;
+}
+
+.formct .emailcont {
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.formct .emailconcont {
+  margin: 10px 0;
+  font-family: 'GangwonEduPowerExtraBoldA';
+}
+
+.formct .email {
+  text-indent: 15px;
+}
+
+.formct .gorbang {
+  text-indent: 0;
+  margin-right: 5px;
+}
+
+.formct .emailchoice {
+  text-indent: 15px;
+  background-color: #fff;
+}
+
+.formct .birth {
+  margin: 10px 0;
+  font-family: 'GangwonEduPowerExtraBoldA';
+}
+
+.formct .birthcon {
+  justify-content: flex-start;
+}
+
+.formct .passTx,
+.formct .checkPassTx,
+.formct .nameTx,
+.formct .numTx,
+.formct .email,
+.formct .readdTx {
+  width: 564px;
+  padding: 20px 20px 20px 20px;
+  font-size: 17px;
+  border-radius: 10px;
+}
+
+.formct .addTx {
+  width: 305px;
+  padding: 20px;
+  font-size: 17px;
+  border-radius: 10px;
+  text-indent: 15px;
+  margin-right: 15px;
+}
+
+.formct .search {
+  width: 236px;
+  font-size: 20px;
+  border-radius: 10px;
+  border: none;
+  background-color: #f7d3cd;
+  color: white;
+  font-family: 'GangwonEduPowerExtraBoldA';
+  padding-top: 10px;
+}
+.formct .search:hover {
+  background-color: #ffbdb1;
+  background: linear-gradient(270deg, #ffbdb1);
+  transition: all 0.4s linear;
+}
+
+.formct .email {
+  width: 232px;
+  font-size: 17px;
+  border-radius: 10px;
+  margin-right: 5px;
+}
+
+.formct .emailchoice {
+  width: 145px;
+  padding: 20px 0;
+  font-size: 15px;
+  border-radius: 10px;
+  color: #bababa;
+  line-height: 1.5;
+}
+
+.formct .emailcom {
+  width: 145px;
+  padding: 20px 0;
+  font-size: 15px;
+  border-radius: 10px;
+  color: #bababa;
+  line-height: 1.5;
+  text-indent: 15px;
+  margin-right: 10px;
+}
+
+.formct .emailgray {
+  background-color: #f1f1f1;
+  width: 145px;
+  padding: 20px 0;
+  font-size: 15px;
+  border-radius: 10px;
+  color: #bababa;
+  line-height: 1.5;
+  text-indent: 15px;
+}
+
+.formct .birthY,
+.formct .birthM,
+.formct .birthD {
+  width: 173px;
+  margin-right: 40px;
+  padding: 20px;
+  font-size: 17px;
+  border-radius: 10px;
+  color: #bababa;
+  text-indent: 15px;
+  background-color: #fff;
+}
+
+.formct .sign {
+  margin: 10px 20px;
+  align-self: center;
+  font-family: 'GangwonEduPowerExtraBoldA';
+}
+
+.formct .signOk,
+.formct .signNo {
+  width: 130px;
+  height: 48px;
+  margin: 30px;
+  font-size: 17px;
+  border-radius: 10px;
+  border: none;
+  color: white;
+  font-family: 'GangwonEduPowerExtraBoldA';
+  padding-top: 10px;
+}
+
+.formct .signOk {
+  background-color: #f7d3cd;
+}
+.formct .signOk:hover {
+  background-color: #ffbdb1;
+  background: linear-gradient(270deg, #ffbdb1);
+  transition: all 0.4s linear;
+}
+
+.formct .signNo {
+  background-color: #feea6d;
+}
+.formct .signNo:hover {
+  background-color: #ffd23e;
+  background: linear-gradient(270deg, #ffd23e);
+  transition: all 0.4s linear;
+}
+/*--------------------------------------------------------카테고리 페이지 이동없이*/
+.inforcon {
+  display: none;
+}
+.summary {
+  position: relative;
+}
+
+.orlist {
+  top: 0;
+  left: 0;
+  width: inherit;
+}
+/*-------------푸터-------------------------------------------------------------------푸터*/
+.main-section-footer #footer {
+  margin-top: 10px;
+}
+
+.footer {
+  padding: 48px 0;
+  background-color: rgb(215, 230, 223);
+  color: black;
+  transition: all 0.3s cubic-bezier(0.16, 0.04, 0.03, 0.95);
+  font-family: 'GangwonEduPowerExtraBoldA';
+}
+
+.section .container {
+  /* width: 100%; */
+  text-align: left;
+  display: block;
+  /* position: relative; */
+  margin: 0 auto;
+  padding: 0 48px;
+  /* max-width: 1500px; */
+  font-family: 'GangwonEduPowerExtraBoldA';
+}
+
+.footer-bottom {
+  margin-top: 48px;
+  padding-top: 48px;
+  border-top: 1px solid black;
+  transition: all 0.3s cubic-bezier(0.16, 0.04, 0.03, 0.95);
+  font-family: 'GangwonEduPowerExtraBoldA';
+}
+
+.float-left {
+  float: left;
+}
+
+.float-right {
+  float: right;
+}
+
+ul {
+  list-style-position: inside;
+}
+
+#footer li {
+  list-style: none;
+}
+
+.footer-top-menu li:first-child {
+  margin-top: 0;
+}
+
+.footer-top-menu a {
+  display: block;
+  font-size: 24px;
+  font-weight: 600;
+  color: black;
+  transition: all 0.3s cubic-bezier(0.16, 0.04, 0.03, 0.95);
+  font-family: 'GangwonEduPowerExtraBoldA';
+}
+
+.footer-top-menu li {
+  display: block;
+  margin-top: 16px;
+  transition: all 0.3s cubic-bezier(0.16, 0.04, 0.03, 0.95);
+  font-family: 'GangwonEduPowerExtraBoldA';
+}
+
+.footer-top-cs dl:first-child {
+  margin-top: 0;
+}
+
+.footer-top-cs dl {
+  display: block;
+  transition: all 0.3s cubic-bezier(0.16, 0.04, 0.03, 0.95);
+}
+
+.footer-top-cs dl {
+  display: block;
+  margin-top: 34px;
+  transition: all 0.3s cubic-bezier(0.16, 0.04, 0.03, 0.95);
+}
+
+.footer-top::after {
+  clear: both;
+  content: ' ';
+  display: table;
+}
+
+*::after {
+  box-sizing: inherit;
+}
+
+.float-none {
+  float: none !important;
+}
+
+.footer-bottom {
+  margin-top: 48px;
+  padding-top: 48px;
+  border-top: 1px solid #000;
+  transition: all 0.3s cubic-bezier(0.16, 0.04, 0.03, 0.95);
+}
+
+.footer-bottom-info li {
+  display: inline-block;
+}
+
+.footer a {
+  color: inherit;
+  text-decoration: inherit;
+}
+
+.footer-bottom-menu {
+  margin-bottom: 20px;
+  transition: all 0.3s cubic-bezier(0.16, 0.04, 0.03, 0.95);
+}
+
+.footer-bottom-menu li {
+  display: inline-block;
+  margin-right: 40px;
+  transition: all 0.3s cubic-bezier(0.16, 0.04, 0.03, 0.95);
+}
+
+.footer-bottom-menu a {
+  font-size: 14px;
+  font-weight: 600;
+  color: black;
+  transition: all 0.3s cubic-bezier(0.16, 0.04, 0.03, 0.95);
+}
+
+.footer a {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+.footer-bottom-info {
+  font-size: 14px;
+  font-weight: 400;
+  color: #777;
+  transition: all 0.3s cubic-bezier(0.16, 0.04, 0.03, 0.95);
+}
+
+.footer-bottom-info {
+  font-size: 14px;
+  font-weight: 400;
+  color: #777;
+  transition: all 0.3s cubic-bezier(0.16, 0.04, 0.03, 0.95);
+}
+
+.footer-bottom-info ul {
+  margin-bottom: 8px;
+  transition: all 0.3s cubic-bezier(0.16, 0.04, 0.03, 0.95);
+}
+
+.footer-bottom-copy {
+  display: block;
+  margin-top: 16px;
+  margin-bottom: 24px;
+  font-family: 'Mark Pro';
+  font-size: 12px;
+  font-weight: 400;
+  color: #777;
+  transition: all 0.3s cubic-bezier(0.16, 0.04, 0.03, 0.95);
+}
+
+.footer-bottom-copy span {
+  display: inline-block;
+  margin-right: 4px;
+  transition: all 0.3s cubic-bezier(0.16, 0.04, 0.03, 0.95);
+}
+
+.footer-bottom-sns__link:first-child {
+  margin-left: 0;
+}
+
+.footer-bottom-sns__link {
+  display: inline-block;
+  margin-left: 14px;
+  transition: all 0.3s cubic-bezier(0.16, 0.04, 0.03, 0.95);
+}
+
+.footer-bottom-sns__link {
+  display: inline-block;
+  margin-left: 14px;
+  transition: all 0.3s cubic-bezier(0.16, 0.04, 0.03, 0.95);
+}
+
+/*--------------------------------------------------------------------미디어쿼리*/
+@media (max-width: 1120px) {
+  #header .category .menu {
+    display: none;
+  }
+  .btn-allmenu {
+    display: block;
+  }
+}
+
+@media (max-width: 1024px) {
+  #header .headerChild {
+    display: grid;
+    grid-template-columns: 0.1fr 1fr 0.45fr;
+  }
+
+  #header .category .menu > li {
+    display: none;
+  }
+
+  #header .logo {
+    margin: 15px 0 0 85px;
+  }
+
+  #header .btn-allmenu {
+    float: right;
+    width: 24px;
+    height: 24px;
+    margin: 38px 64px 0 0;
+    text-indent: -9999em;
+    background: url(../image/ico_24_allmenu_black\ berger.svg) no-repeat 0 0;
+    overflow: hidden;
+  }
+
+  .btn-allmenu {
+    display: block;
+  }
+
+  .profile {
+    width: calc(100% - 68px);
+  }
+
+  .listcont {
+    display: none;
+  }
+
+  .frm {
+    justify-content: center;
+  }
+
+  .welcom {
+    width: 80vw;
+  }
+
+  .reviewtd,
+  .ordtd {
+    width: 80vw;
+  }
+
+  .ordtd2,
+  .reviewtd2 {
+    width: 80vw;
+  }
+
+  .reviewpage {
+    padding: 25px 2px 15px;
+    width: 13vw;
+  }
+
+  .mylist {
+    background-color: #fefdfa;
+    padding-top: 20px;
+    padding-bottom: 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    height: 300px;
+  }
+  .mylist > li {
+    background-color: #fefdfa;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    width: 165px;
+    height: 60px;
+  }
+  .mylist > li > .img {
+    padding-bottom: 3px;
+    margin: 0;
+  }
+  .frm {
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+  .listcont {
+    display: block;
+    width: 80vw;
+  }
+  .mypage {
+    display: none;
+  }
+}
+
+@media (max-width: 900px) {
+}
+
+@media (max-width: 768px) {
+  .profile {
+    padding: 48px 35px;
+  }
+  .profile > .fa-gear {
+    display: block;
+
+    width: 60px;
+    font-size: 35px;
+  }
+
+  .ordNo,
+  .reviewNo {
+    display: none;
+  }
+  .ordNo2 {
+    display: none;
+  }
+
+  .reviewNo2 {
+    display: none;
+  }
+  .myadj {
+    display: none;
+  }
+  .frm {
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+  .orlist {
+    display: flex;
+    flex-direction: row;
+    width: inherit;
+    position: relative;
+  }
+
+  .orderview,
+  .reviewlist {
+    display: block;
+  }
+
+  .ordertitle,
+  .reviewtitle {
+    cursor: pointer;
+  }
+  .ordertitle2,
+  .reviewtitle2 {
+    cursor: pointer;
+  }
+
+  .orderwidth,
+  .reviewidth {
+    width: 77vw;
+  }
+  .orderwidth2,
+  .reviewidth2 {
+    width: 77vw;
+  }
+
+  .ordwidth,
+  .rewidth {
+    width: 37vw;
+  }
+  .ordwidth2,
+  .rewidth2 {
+    width: 37vw;
+  }
+
+  .reviewtitle,
+  .ordertitle {
+    padding: 20px 10px;
+  }
+  .reviewtitle2,
+  .ordertitle2 {
+    padding: 20px 10px;
+  }
+
+  .listcont {
+    display: block;
+    width: 80vw;
+  }
+  .mypage {
+    display: none;
+  }
+
+  .mylist {
+    background-color: #fefdfa;
+    padding-top: 20px;
+    padding-bottom: 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    height: 300px;
+  }
+  .mylist > li {
+    background-color: #fefdfa;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    width: 165px;
+    height: 60px;
+  }
+  .mylist > li > .img {
+    padding-bottom: 3px;
+    margin: 0;
+  }
+
+  .fa-solid,
+  .fa-regular {
+    padding-left: 10px;
+    margin: 0;
+  }
+
+  .list:hover {
+    padding-left: 10px;
+    width: 145px;
+  }
+
+  .event {
+    padding-top: 0px;
+  }
+
+  .eventimg {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 80vw;
+  }
+
+  .reviewtitle {
+    justify-content: center;
+  }
+
+  .flower {
+    left: calc(-50%);
+  }
+
+  .infor_container a {
+    text-decoration: none;
+  }
+
+  .infor_container {
+    padding-top: 30px;
+  }
+
+  .formct p {
+    color: red;
+    margin-top: 5px;
+    text-indent: 15px;
+  }
+
+  .formct select {
+    border: 1px solid #e5e5e5;
+    border-radius: 10px;
+  }
+
+  .infor_container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-content: center;
+    align-items: flex-start;
+  }
+
+  .formct > .form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 auto;
+    width: 730px;
+    height: 1350px;
+    border: 0px solid #ffda48;
+    border-radius: 10px;
+    color: #333;
+    text-indent: 10px;
+  }
+
+  .formct .labcon {
+    display: flex;
+    flex-direction: column;
+    margin: 10px 20px;
+  }
+
+  .formct input {
+    border: 1px solid #e5e5e5;
+    border-radius: 10px;
+    background-color: #fff;
+  }
+
+  .formct input::placeholder {
+    color: #bababa;
+  }
+
+  .formct .id {
+    font-family: 'GangwonEduPowerExtraBoldA';
+    margin-bottom: 20px;
+  }
+
+  .formct .idTx {
+    width: 40vw;
+    font-size: 14px;
+    border-radius: 10px;
+    text-indent: 5px;
+    padding: 20px;
+    margin-right: 30px;
+  }
+
+  .formct .idTxcon {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+  }
+
+  .formct .double {
+    width: 20vw;
+    font-size: 17px;
+    border-radius: 10px;
+    border: none;
+    background-color: #f7d3cd;
+    color: white;
+    font-family: 'GangwonEduPowerExtraBoldA';
+  }
+
+  .formct .password,
+  .formct .checkpass,
+  .formct .name,
+  .formct .address,
+  .formct .numTxcon {
+    display: flex;
+    flex-direction: column;
+    font-family: 'GangwonEduPowerExtraBoldA';
+  }
+
+  .formct .password {
+    margin-bottom: 20px;
+  }
+
+  .formct .passTx {
+    text-indent: 15px;
+  }
+
+  .formct .checkpass {
+    margin-bottom: 20px;
+  }
+
+  .formct .checkPassTx {
+    text-indent: 10px;
+  }
+
+  .formct .name {
+    margin-bottom: 20px;
+  }
+
+  .formct .nameTx {
+    text-indent: 10px;
+  }
+
+  .formct .address {
+    margin-bottom: 10px;
+  }
+
+  .formct .addTxcon {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+  }
+
+  .formct .readdTx {
+    text-indent: 10px;
+
+    margin-top: 10px;
+  }
+
+  .formct .numTxcon {
+    margin: 10px 0;
+  }
+
+  .formct .numTx {
+    text-indent: 10px;
+  }
+
+  .formct .emailcont,
+  .formct .birthcon {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .formct .emailcont {
+    align-items: center;
+    justify-content: flex-start;
+  }
+
+  .formct .emailconcont {
+    margin: 10px 0;
+    font-family: 'GangwonEduPowerExtraBoldA';
+  }
+
+  .formct .gorbang {
+    text-indent: 0;
+    margin-right: 5px;
+  }
+
+  .formct .emailchoice {
+    text-indent: 10px;
+    background-color: #fff;
+  }
+
+  .formct .birth {
+    margin: 10px 0;
+    font-family: 'GangwonEduPowerExtraBoldA';
+  }
+
+  .formct .birthcon {
+    justify-content: flex-start;
+  }
+
+  .formct .passTx,
+  .formct .checkPassTx,
+  .formct .nameTx,
+  .formct .numTx,
+  .formct .email,
+  .formct .readdTx {
+    width: 66vw;
+    padding: 20px 20px 20px 20px;
+    font-size: 14px;
+    border-radius: 10px;
+  }
+
+  .formct .addTx {
+    width: 40vw;
+    padding: 20px;
+    font-size: 14px;
+    border-radius: 10px;
+    text-indent: 5px;
+    margin-right: 15px;
+  }
+
+  .formct .search {
+    width: 20vw;
+    font-size: 15px;
+    border-radius: 10px;
+    border: none;
+    background-color: #f7d3cd;
+    color: white;
+    font-family: 'GangwonEduPowerExtraBoldA';
+    padding-top: 10px;
+  }
+
+  .formct .email {
+    width: 20vw;
+    font-size: 14px;
+    border-radius: 10px;
+    margin-right: 5px;
+    text-indent: 5px;
+  }
+
+  .formct .emailchoice {
+    width: 18vw;
+    padding: 20px 0;
+    font-size: 15px;
+    border-radius: 10px;
+    color: #bababa;
+    line-height: 1.5;
+  }
+
+  .formct .emailcom {
+    width: 20vw;
+    padding: 20px 0;
+    font-size: 15px;
+    border-radius: 10px;
+    color: #bababa;
+    line-height: 1.5;
+    text-indent: 15px;
+    margin-right: 10px;
+  }
+
+  .formct .emailgray {
+    background-color: #f1f1f1;
+    width: 20vw;
+    padding: 18px 0;
+    font-size: 15px;
+    border-radius: 10px;
+    color: #bababa;
+    line-height: 1.5;
+    text-indent: 10px;
+    margin-right: 10px;
+  }
+
+  .formct .birthY,
+  .formct .birthM,
+  .formct .birthD {
+    width: 23vw;
+    margin-right: 10px;
+    padding: 20px;
+    font-size: 14px;
+    border-radius: 10px;
+    color: #bababa;
+    text-indent: 10px;
+    background-color: #fff;
+  }
+}

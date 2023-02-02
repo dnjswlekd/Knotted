@@ -1,0 +1,510 @@
+/* * {
+  padding: 0;
+  margin: 0;
+  font-family: 'nanumsquare';
+  text-decoration: none;
+  list-style: none;
+} */
+
+#cursor {
+  position: absolute;
+  z-index: 9999999999999999;
+  transform: translate(10%, 10%);
+  background-image: url(../image/cursorFill3.svg);
+  background-size: contain;
+  width: 30px;
+  height: 30px;
+  pointer-events: none;
+  background-color: rgba(255, 255, 255, 0);
+}
+
+
+@font-face {
+  font-family: 'GangwonEduPowerExtraBoldA';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2201-2@1.0/GangwonEduPowerExtraBoldA.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  background-color: #fdfaf2;
+  overflow-x: hidden;
+}
+
+body::-webkit-scrollbar {
+  width: 8px; /* 스크롤바의 너비 */
+}
+
+body::-webkit-scrollbar-thumb {
+  height: 30%; /* 스크롤바의 길이 */
+  background: #f2a69a; /* 스크롤바의 색상 */
+
+  border-radius: 10px;
+}
+
+body::-webkit-scrollbar-track {
+  background: #f2a69a43; /*스크롤바 뒷 배경 색상*/
+}
+
+
+
+@import url('https://cdn.rawgit.com/moonspam/NanumSquare/master/nanumsquare.css');
+@import url('https://fonts.googleapis.com/css?family=Black+Han+Sans:400');
+@import url('https://fonts.googleapis.com/css?family=Black+Han+Sans&display=swap&subset=korean');
+
+@font-face {
+    font-family: 'SuseongDotum';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2205@1.0/SuseongDotum.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'GangwonEduPowerExtraBoldA';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2201-2@1.0/GangwonEduPowerExtraBoldA.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+/*메인css-------------------------------------------------메인css-----------------------*/
+a {
+  text-decoration: none;
+}
+
+body > .container {
+  width: 538px;
+  height: 340px;
+  margin: 100px auto;
+  border-radius: 1rem;
+}
+
+.form {
+  margin: 0 100px;
+}
+
+.log {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: #f2a69a;
+  margin: 0 auto;
+  font-size: 20px;
+  position: relative;
+}
+
+.log .passlab .active {
+  top: -15px;
+  font-size: 14px;
+}
+.log::before {
+  background: #6884dd;
+}
+
+.loginlog {
+  display: flex;
+  justify-content: center;
+  margin: 40px;
+}
+
+.loginlog img {
+  width: 50%;
+}
+
+.idlab,
+.passlab {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  border-bottom: 1px solid #f7d3cd;
+  margin: 10px 10px 10px 20px;
+  width: 380px;
+  font-family: 'GangwonEduPowerExtraBoldA';
+}
+.idTxt {
+  margin: 10px 10px 0px 5px;
+  width: 80px;
+  font-family: 'GangwonEduPowerExtraBoldA';
+}
+
+.passTxt {
+  margin: 10px 10px 0px 5px;
+  width: 105px;
+  font-family: 'GangwonEduPowerExtraBoldA';
+}
+
+.idtext,
+.passtext {
+  border: none;
+  width: 320px;
+  height: 35px;
+  outline: none;
+  font-size: 20px;
+  background-color: #fdfaf2;
+}
+
+.log svg {
+  width: 90px;
+  fill: rgb(157, 214, 198);
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+.log svg:hover {
+  fill: rgb(209, 236, 230);
+}
+.log svg.active {
+  fill: rgb(183, 206, 195);
+}
+.log svg.active:hover {
+  fill: rgb(209, 236, 230);
+}
+.log .passlab {
+  transition: all 0.15s ease-in-out;
+}
+.log input {
+  border: 0;
+  position: relative;
+  display: block;
+  padding: 4px 0;
+}
+.log input :focus {
+  outline: none;
+}
+
+.href {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.forget {
+  color: #f2a69a;
+  font-size: 11px;
+  font-family: 'GangwonEduPowerExtraBoldA';
+  cursor: pointer;
+}
+
+.socialContainer {
+  display: flex;
+  flex-direction: column;
+}
+
+.social {
+  color: #f2a69a;
+  font-size: 20px;
+  margin: 20px 0;
+  font-family: 'GangwonEduPowerExtraBoldA';
+}
+.socialImg {
+  display: flex;
+  justify-content: center;
+  justify-items: center;
+  align-items: center;
+}
+
+.naver,
+.google,
+.kakao {
+  width: 45px;
+  height: 45px;
+  margin: 15px;
+  justify-items: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.buts {
+  display: flex;
+  justify-content: center;
+}
+
+.buts .signUp,
+.buts .login {
+  width: 94px;
+  height: 35px;
+  color: #fff;
+  font-size: 15px;
+  border-radius: 10px;
+  border: none;
+  font-family: 'GangwonEduPowerExtraBoldA';
+  cursor: pointer;
+}
+
+.buts .signUp {
+  background-color: #feea6d;
+  margin-right: 15px;
+  margin-top: 15px;
+}
+.buts .signUp:hover {
+  background-color: #ffd23e;
+  background: linear-gradient(270deg, #ffd23e);
+  transition: all 0.4s linear;
+}
+.buts .login {
+  background-color: #f7d3cd;
+  margin-left: 15px;
+  margin-top: 15px;
+}
+.buts .login:hover {
+  background-color: #ffaea0;
+  background: linear-gradient(270deg, #ffaea0);
+  transition: all 0.4s linear;
+}
+
+.joke {
+  font-family: 'GangwonEduPowerExtraBoldA';
+  font-size: 12px;
+  margin-left: 10px;
+  color: red;
+}
+
+/*-------------푸터------------------------------------------------------------푸터*/
+/* footer */
+.main-section-footer #footer {
+    margin-top: 10px;
+}
+
+.footer {
+    padding: 48px 0;
+    background-color: rgb(215, 230, 223);
+    color: black;
+    transition: all .3s cubic-bezier(0.16, 0.04, 0.03, 0.95);
+}
+
+.section .container {
+    display: inline-block;
+    width: 100%;
+    text-align: left;
+}
+
+.footer .container {
+    display: block;
+    position: relative;
+    margin: 0 auto;
+    padding: 0 48px;
+    max-width: 1500px;
+}
+
+.footer-bottom {
+    margin-top: 48px;
+    padding-top: 48px;
+    border-top: 1px solid black;
+    transition: all .3s cubic-bezier(0.16, 0.04, 0.03, 0.95);
+}
+
+.float-left {
+    float: left;
+}
+
+.float-right {
+    float: right;
+}
+
+.footer ul {
+    list-style-position: inside;
+}
+
+#footer li {
+    list-style: none;
+}
+
+.footer-top-menu li:first-child {
+    margin-top: 0;
+}
+
+.footer-top-menu a {
+    display: block;
+    font-size: 24px;
+    font-weight: 600;
+    color: black;
+    transition: all .3s cubic-bezier(0.16, 0.04, 0.03, 0.95);
+}
+
+.footer-top-menu li {
+    display: block;
+    margin-top: 16px;
+    transition: all .3s cubic-bezier(0.16, 0.04, 0.03, 0.95);
+}
+
+.footer-top-cs dl:first-child {
+    margin-top: 0;
+}
+
+.footer-top-cs dl {
+    display: block;
+    transition: all .3s cubic-bezier(0.16, 0.04, 0.03, 0.95);
+}
+
+.footer-top-cs dl {
+    display: block;
+    margin-top: 34px;
+    transition: all .3s cubic-bezier(0.16, 0.04, 0.03, 0.95);
+}
+
+.footer-top-cs dl dt {
+    font-family: 'GangwonEduPowerExtraBoldA';
+}
+.footer-top-cs dl dd {
+    font-family: 'GangwonEduPowerExtraBoldA';
+}
+
+.footer ul {
+  list-style-position: inside;
+  font-family: 'GangwonEduPowerExtraBoldA';
+}
+
+.footer li {
+  list-style: none;
+  font-family: 'GangwonEduPowerExtraBoldA';
+}
+
+.footer a {
+  font-family: 'GangwonEduPowerExtraBoldA';
+}
+
+.footer strong {
+  font-family: 'GangwonEduPowerExtraBoldA';
+}
+
+.footer span {
+  font-family: 'GangwonEduPowerExtraBoldA';
+}
+
+
+@media screen and (max-width:1024px) {
+    .footer-top-cs {
+        display: none;
+    }
+
+    .float-left {
+        line-height: 17px;
+        transition: all .3s cubic-bezier(0.16, 0.04, 0.03, 0.95);
+    }
+
+    .footer-bottom-menu {
+        display: flex;
+        margin-top: -3vh;
+        font-size: 24px;
+        font-weight: 600;
+        color: black;
+        transition: all .3s cubic-bezier(0.16, 0.04, 0.03, 0.95);
+    }
+}
+
+.footer-top::after {
+    clear: both;
+    content: " ";
+    display: table;
+}
+
+*::after {
+    box-sizing: inherit;
+}
+
+.float-none {
+    float: none !important;
+}
+
+.footer-bottom {
+    margin-top: 48px;
+    padding-top: 48px;
+    border-top: 1px solid #000;
+    transition: all .3s cubic-bezier(0.16, 0.04, 0.03, 0.95);
+}
+
+.footer-bottom-info li {
+    display: inline-block;
+}
+
+.footer a {
+    color: inherit;
+    text-decoration: inherit;
+}
+
+.footer-bottom-menu {
+    margin-bottom: 20px;
+    transition: all .3s cubic-bezier(0.16, 0.04, 0.03, 0.95);
+}
+
+.footer-bottom-menu li {
+    display: inline-block;
+    margin-right: 40px;
+    transition: all .3s cubic-bezier(0.16, 0.04, 0.03, 0.95);
+}
+
+.footer-bottom-menu a {
+    font-size: 14px;
+    font-weight: 600;
+    color: black;
+    transition: all .3s cubic-bezier(0.16, 0.04, 0.03, 0.95);
+}
+
+.footer a {
+
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+.footer-bottom-info {
+    font-size: 14px;
+    font-weight: 400;
+    color: #777;
+    transition: all .3s cubic-bezier(0.16, 0.04, 0.03, 0.95);
+}
+
+.footer-bottom-info {
+    font-size: 14px;
+    font-weight: 400;
+    color: #777;
+    transition: all .3s cubic-bezier(0.16, 0.04, 0.03, 0.95);
+}
+
+.footer-bottom-info ul {
+    margin-bottom: 8px;
+    transition: all .3s cubic-bezier(0.16, 0.04, 0.03, 0.95);
+}
+
+.footer-bottom-copy {
+    display: block;
+    margin-top: 16px;
+    margin-bottom: 24px;
+    font-family: "Mark Pro";
+    font-size: 12px;
+    font-weight: 400;
+    color: #777;
+    transition: all .3s cubic-bezier(0.16, 0.04, 0.03, 0.95);
+}
+
+.footer-bottom-copy span {
+    display: inline-block;
+    margin-right: 4px;
+    transition: all .3s cubic-bezier(0.16, 0.04, 0.03, 0.95);
+}
+
+.footer-bottom-sns__link:first-child {
+    margin-left: 0;
+}
+
+.footer-bottom-sns__link {
+    display: inline-block;
+    margin-left: 14px;
+    transition: all .3s cubic-bezier(0.16, 0.04, 0.03, 0.95);
+}
+
+.footer-bottom-sns__link {
+    display: inline-block;
+    margin-left: 14px;
+    transition: all .3s cubic-bezier(0.16, 0.04, 0.03, 0.95);
+}
+
+@media (max-width: 1024px) {
+  .category {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+}
+
+@media (max-width: 900px) {
+  
+}
