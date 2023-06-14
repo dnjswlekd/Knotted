@@ -1,40 +1,37 @@
 (function () {
-  'use strict';
+  "use strict";
 
-  const swiper = new Swiper('.swiper', {
-    direction: 'horizontal',
+  const swiper = new Swiper(".swiper", {
+    direction: "horizontal",
     loop: true,
 
     pagination: {
-      el: '.swiper-pagination',
+      el: ".swiper-pagination",
     },
 
     navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev',
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
     },
   });
 
-  
-// dessert
-  const category = document.querySelectorAll('#o_section3 .bigger .cursor-pointer');
-  const dessertImgDivList = document.querySelectorAll('.msg .photo1');
+  // dessert
+  const category = document.querySelectorAll("#o_section3 .bigger .cursor-pointer");
+  const dessertImgDivList = document.querySelectorAll(".msg .photo1");
   console.log(category);
   console.log(dessertImgDivList);
 
   category.forEach((item, i) => {
-    item.addEventListener('click', e => {
-
-      category.forEach(subItem => {
-        subItem.classList.toggle('nm', e.target !== subItem);
+    item.addEventListener("click", (e) => {
+      category.forEach((subItem) => {
+        subItem.classList.toggle("nm", e.target !== subItem);
       });
 
       dessertImgDivList.forEach((subItem, subI) => {
-        subItem.classList.toggle('display-none', i !== subI);
-      })
+        subItem.classList.toggle("display-none", i !== subI);
+      });
     });
   });
-
 
   // for(let i=0; i<category.length; i++) {
   //   const item = category[i];
@@ -49,17 +46,11 @@
   //   })
   // }; function -> 호이스팅x
 
-
   // category.forEach(item => {
   //   item.addEventListener('click', e => {
   //     alert('hi')
   //   })
   // });
-
-
-
-
-
 
   /*
 
@@ -75,12 +66,6 @@
   결과는 cake에는 nm이 없으므로 그대로 
 
   */
-
-
-
-
-
-
 
   // const name1 = document.querySelector('.name1');
   // const name2 = document.querySelector('.name2');
@@ -157,34 +142,32 @@
   // });
 
   window.onload = function () {
-
     function onClick() {
-      document.querySelector('.modal_wrap').style.display = 'block';
-      document.querySelector('.black_bg').style.display = 'block';
+      document.querySelector(".modal_wrap").style.display = "block";
+      document.querySelector(".black_bg").style.display = "block";
     }
     function offClick() {
-      document.querySelector('.modal_wrap').style.display = 'none';
-      document.querySelector('.black_bg').style.display = 'none';
+      document.querySelector(".modal_wrap").style.display = "none";
+      document.querySelector(".black_bg").style.display = "none";
     }
 
-    document.getElementById('modal_btn').addEventListener('click', onClick);
-    document.querySelector('.modal_close').addEventListener('click', offClick);
-
+    document.getElementById("modal_btn").addEventListener("click", onClick);
+    document.querySelector(".modal_close").addEventListener("click", offClick);
   };
 
-  const handleScroll = document.querySelector('.handleScroll')
+  const handleScroll = document.querySelector(".handleScroll");
 
   handleScroll.addEventListener = (e, scroll) => {
     switch (scroll) {
-      case 'start': // 마우스 버튼 누르는 경우
+      case "start": // 마우스 버튼 누르는 경우
         setOriginX(e.clientX);
         setIsScroll(true);
         break;
-      case 'end': // 마우스를 버튼 누르기 중단
+      case "end": // 마우스를 버튼 누르기 중단
         setAfterX(position);
         setIsScroll(false);
         break;
-      case 'leave': // 마우스가 영역을 벗어난 경우
+      case "leave": // 마우스가 영역을 벗어난 경우
         setIsScroll(false);
         break;
       default:
@@ -192,7 +175,7 @@
     }
   };
 
-  const handleSlide = e => {
+  const handleSlide = (e) => {
     const newPosition = e.clientX - originX + afterX;
     const hiddenLength = e.currentTarget.offsetWidth - 166 * BOOKS.length;
     if (isScroll === false) {
