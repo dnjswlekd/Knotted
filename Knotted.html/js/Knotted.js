@@ -141,20 +141,6 @@
   //     name5.classList = 'font-color cursor-pointer size-up';
   // });
 
-  window.onload = function () {
-    function onClick() {
-      document.querySelector(".modal_wrap").style.display = "block";
-      document.querySelector(".black_bg").style.display = "block";
-    }
-    function offClick() {
-      document.querySelector(".modal_wrap").style.display = "none";
-      document.querySelector(".black_bg").style.display = "none";
-    }
-
-    document.getElementById("modal_btn").addEventListener("click", onClick);
-    document.querySelector(".modal_close").addEventListener("click", offClick);
-  };
-
   const handleScroll = document.querySelector(".handleScroll");
 
   handleScroll.addEventListener = (e, scroll) => {

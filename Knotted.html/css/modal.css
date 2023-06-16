@@ -1,0 +1,134 @@
+/* 모달창 */
+.modal {
+  position: fixed;
+  left: 0;
+  top: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 9999;
+}
+
+.modal-wrap {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 400px;
+  height: 300px;
+  background-color: #fff;
+  border-radius: 20px;
+  padding: 20px;
+  text-align: center;
+  /* background-color: #f1faee; */
+}
+
+.modal-box {
+  position: absolute;
+  left: 5%;
+  top: 10%;
+  display: block;
+  /*webkit을 사용해야지 사파리에서도 정상적으로 동작함*/
+  width: 360px;
+  height: 200px;
+  -webkit-backface-visibility: hidden;
+  -webkit-transform: translate3d(0, 0, 0);
+  -webkit-perspective: 0;
+  -webkit-transition: 1s;
+  backface-visibility: hidden; /*뒷면 숨기기*/
+  visibility: visible;
+  transition: 1s;
+  perspective: 1000px;
+}
+
+.modal-front {
+  position: absolute;
+  transform: rotateY(0deg);
+}
+.modal-back {
+  transform: rotateY(-180deg);
+}
+
+.modal-wrap:hover .modal-front {
+  transform: rotateY(180deg); /*y축을 기준으로 180도까지회전*/
+}
+
+.modal-wrap:hover .modal-back {
+  transform: rotateY(0deg); /*y축을 기준으로 0도 까지회전*/
+}
+
+.modal-wrap h1 {
+  font-size: 24px;
+  font-weight: bold;
+  margin-top: 20px;
+}
+
+.modal-front i {
+  display: block;
+  text-align: center;
+  font-size: 28px;
+  margin-top: 30px;
+}
+
+.modal-box h2 {
+  font-size: 16px;
+  color: #000;
+  font-weight: 500;
+  line-height: 1.6;
+  padding-top: 20px;
+  padding-bottom: 10px;
+}
+
+.modal-box span {
+  font-size: 14px;
+  color: #666;
+}
+
+.modal-box h3 i {
+  display: inline-block;
+  font-size: 18px;
+}
+
+.modal-back .modal-list {
+  position: relative;
+  display: block;
+  margin-top: 20px;
+}
+
+.modal-back .modal-list h3 {
+  display: inline-block;
+  font-size: 18px;
+  color: #000;
+  font-weight: 500;
+  line-height: 1.8;
+  margin-bottom: 15px;
+}
+
+.modal-back .modal-list li {
+  padding-top: 5px;
+  font-size: 14px;
+  color: #666;
+  line-height: 1.6;
+  word-break: keep-all;
+}
+
+.modal-back .modal-list li b {
+  color: #333;
+  font-weight: 700;
+}
+
+.modal-close {
+  position: absolute;
+  right: 30px;
+  top: 30px;
+  border: 0;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.modal-close i {
+  display: block;
+  text-align: center;
+  font-size: 30px;
+}

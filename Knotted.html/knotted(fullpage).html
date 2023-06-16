@@ -11,6 +11,10 @@
     <link href="https://fonts.googleapis.com/css2?family=Black+Han+Sans&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css">
     <link rel="stylesheet" href="css/jquery.fullPage.css">
+    <link rel="stylesheet" href="css/modal.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <script src="https://code.jquery.com/jquery-3.6.1.min.js"
         integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
     <script src="js/jquery.fullPage.js"></script>
@@ -25,7 +29,30 @@
     <!--마우스커서 커스텀-->
     <div id="cursor"></div>
     <script src="js/mouseCurser.js"></script>
+    <!-- modal -->
+    <div class="modal">
+        <div class="modal-wrap">
+            <div class="modal-box modal-front">
+                <i class="fas fa-laptop-code"></i>
+                <h1>Knotted</h1>
+                <h2>이 사이트는 팀프로젝트용으로 제작되었으며<br>
+                    리소스는 박원지에게 있습니다.</h2>
+                <span>본 사이트는 Chrome에 최적화 되어있습니다.</span>
+            </div>
 
+            <div class="modal-box modal-back">
+                <ul class="modal-list">
+                    <h3><i class="fas fa-bullhorn"></i> <u>이렇게 제작하였습니다</u> :) </h3>
+                    <li>1. <b>Favicon</b>을 추가하였습니다.</li>
+                    <li>2. Header, Visual, About us 영역을 Container 너비 기준으로 재정렬해서 <b>사용자가 보는 화면의 레이아웃을 일관성있게 재구성</b>하였습니다.
+                    </li>
+                    <li>3. UX 편의성을 향상시키기 위해 <b>주메뉴 및 서브메뉴에 마우스 롤오버시 포커스 유지</b> 기능을 추가하였습니다. </li>
+                </ul>
+            </div>
+
+            <button class="modal-close"><i class="fas fa-times"></i></button>
+        </div>
+    </div>
 
     <!-- header -->
     <div id="wrapper">
