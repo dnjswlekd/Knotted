@@ -1,11 +1,12 @@
-window.onload = function () {
-  const modal = document.querySelector(".modal");
-  const modalClose = document.querySelector(".modal-close");
+// modal
+// window.onload = function () {
+//   const modal = document.querySelector(".modal");
+//   const modalClose = document.querySelector(".modal-close");
 
-  modalClose.addEventListener("click", function () {
-    modal.style.display = "none";
-  });
-};
+//   modalClose.addEventListener("click", function () {
+//     modal.style.display = "none";
+//   });
+// };
 
 $(function () {
   const $category = document.querySelector("#header div.category");
